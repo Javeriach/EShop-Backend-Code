@@ -36,9 +36,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
     payment_method_types: ['card'],
     line_items: line_items,
     mode: 'payment',
-    success_url:
-      'http://localhost:5173/success?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'http://localhost:5173/cancel',
+    successUrl : 'https://ecommerce-frontend-txaz-e4n95i4nn-javeriachs-projects.vercel.app/success?session_id={CHECKOUT_SESSION_ID}';
+   cancelUrl : 'https://ecommerce-frontend-txaz-e4n95i4nn-javeriachs-projects.vercel.app/cancel'
   });
 
   res.json({ id: session.id });
